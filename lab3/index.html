@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style type="text/css">
+body {
+    width: 800px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.header {
+    border: 1px solid black;
+}
+
+.header td {
+    border: 1px solid black;
+}
+
+.info {
+    border-collapse: separate;
+    border-spacing: 5px 15px;
+}
+
+.bill {
+    border: 2px solid black;
+}
+
+.bill td {
+    border: 1px solid black;
+}
+
+.summ {
+    border-collapse: separate;
+    border-spacing: 20px 2px;
+    margin-top: 25px;
+}
+
+.warning {
+    margin-top: 125px;
+}
+  </style>
+</head>
+<body>
+    <table cellspacing="0" border-collapse class="header" width="800px">
+        <tr>
+            <td width="400px" rowspan="2">АО "Лучший Банк" г. Санкт-Петербург<br><br>Банк получателя</td>
+            <td width="70px">БИК</td>
+            <td rowspan="2" valign="top">044525700<br>30101810200000000700</td>
+        </tr>
+        <tr>
+            <td valign="top">Сч. №</td>
+        </tr>
+        <tr>
+            <td>ИНН 7722737766 КПП 772201001</td>
+            <td rowspan="3" valign="top">Сч. №</td>
+            <td rowspan="3" valign="top">40702810900000002453</td>
+        </tr>
+        <tr>
+            <td>ООО "Сети"<br><br>Получатель</td>
+        </tr>
+    </table>
+    <h1>Счет на оплату № 56 от 20 мая 2020г</h1>
+    <hr color="black" width="800px" align="left">
+    <table width="800px" class="info">
+        <tr>
+            <td width="100px">Поставщик (Исполнитель):</td>
+            <td width="670px"><b>ООО"Сети", ИНН 7722737753, КПП 773301001, 109052, Санкт-Петербург г, Пушкинская ул, дом №
+                5, корпус 1, тел.:</b></td>
+        </tr>
+        <tr>
+            <td>Покупатель (Заказчик):</td>
+            <td><b>ООО"ВкуснаяЕда", ИНН 7722737457, КПП 773354216, 109070, Санкт-Петербург г, Лесная ул, дом №
+                1, корпус 5, тел.:</b></td>
+        </tr>
+        <tr>
+            <td>Основание:</td>
+            <td><b>№ 20022016 от 12.02.2016</b></td>
+        </tr>
+    </table>
+
+    <table class="bill" width="800px">
+        <tr>
+            <td><b>№</b></td>
+            <td><b>Товары (работы, услуги)</b></td>
+            <td><b>Кол-во</b></td>
+            <td><b>Ед.</b></td>
+            <td><b>Цена</b></td>
+            <td><b>Сумма</b></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Телефония</td>
+            <td></td>
+            <td></td>
+            <td>{{ context.phone }}</td>
+            <td>{{ context.phone }}</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Интернет</td>
+            <td></td>
+            <td></td>
+            <td>{{ context.internet }}</td>
+            <td>{{ context.internet }}</td>
+        </tr>
+    </table>
+
+    <table class="summ" align="right">
+        <tr>
+            <td><b>Итого:</b></td>
+            <td><b>{{ context.total }}</b></td>
+        </tr>
+        <tr>
+            <td><b>В том числе НДС:</b></td>
+            <td><b>{{ context.nds }}</b></td>
+        </tr>
+        <tr>
+            <td><b>Всего к оплате:</b></td>
+            <td><b>{{ context.total }}</b></td>
+        </tr>
+    </table>
+
+    <p class="warning">Внимание!<br>
+    Оплата данного счета означает согласие с условиями поставки товара.<br>
+    Уведомление об оплате обязательно, в противном случае не гарантируется наличие товара на складе.<br>
+    Товар отпускается по факту прихода денег на р / с Поставщика, самовывозом, при наличии доверенности и
+        паспорта.<br></p>
+    <hr color="black">
+    <p><b>Руководитель:</b> Олешин С.С.</p>
+    <p><b>Бухгалтер:</b> Есенин Ф.Ф.</p>
+</body>
